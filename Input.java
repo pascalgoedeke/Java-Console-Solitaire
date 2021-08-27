@@ -1,0 +1,4 @@
+enum Input
+{
+  PILE, ROW, DESTINATION_PILE;
+}
