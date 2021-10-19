@@ -269,10 +269,18 @@ class Game
 
     if(to == null)
     {
-      if((toPile == depositSpade && card.getSuit() == Suit.SPADE) ||
-         (toPile == depositHeart && card.getSuit() == Suit.HEART) ||
-         (toPile == depositClub && card.getSuit() == Suit.CLUB) ||
-         (toPile == depositDiamond && card.getSuit() == Suit.DIAMOND))
+      if((toPile == depositSpade &&
+          card.getSuit() == Suit.SPADE &&
+          card.getNumber() == Number.ACE) ||
+         (toPile == depositHeart &&
+          card.getSuit() == Suit.HEART &&
+          card.getNumber() == Number.ACE) ||
+         (toPile == depositClub &&
+          card.getSuit() == Suit.CLUB &&
+          card.getNumber() == Number.ACE) ||
+         (toPile == depositDiamond &&
+          card.getSuit() == Suit.DIAMOND &&
+          card.getNumber() == Number.ACE))
         return true;
       else
         return false;
